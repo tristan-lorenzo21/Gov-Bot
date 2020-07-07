@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const axios = require('axios');
+require('dotenv').config({ path: './config.env' });
 const bot = new Discord.Client();
 const { Client, MessageAttachment } = require('discord.js');
 bot.commands = new Discord.Collection();
@@ -9,10 +10,9 @@ Object.keys(botCommands).map(key => {
   bot.commands.set(botCommands[key].name, botCommands[key])
 });
 
+const TOKEN = process.env.DISCORD_TOKEN;
+const API_KEY = process.env.WEATHER_API_KEY;
 
-
-const TOKEN = 'NzI5NzcwMTg1NTI3MTMyMTkw.XwNxow.WgCvbKQ8-7OdfuRUYNjvZ7rmCCk';
-const API_KEY = '22d9c8375245d28767967f8a3488d52e';
 
 bot.login(TOKEN);
 // Command prefix setup
