@@ -57,26 +57,6 @@ bot.on('message', msg => {
   }
 });
 
-// Meme Bot
-bot.on('message', msg => {
-  if (msg.content.startsWith(`${prefix}meme`)) {
-    axios.get(`https://api.imgflip.com/get_memes`)
-      .then((response) => {
-        let memes = response.data.data.memes;
-        let randomNumber = Math.floor(Math.random() * memes.length)
-        let randomMeme = memes[randomNumber]
-        let url = randomMeme.url
-
-        let memeName = randomMeme.name
-        let memePic = new MessageAttachment(url, memeName)
-
-        msg.channel.send(`${memePic.name} ${memePic.attachment}`)
-      }).catch((error) => {
-        console.log(error)
-      })
-  }
-});
-
 bot.on('message', msg => {
   const args = msg.content.split(/ +/);
   const command = args.shift();
