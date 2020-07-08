@@ -6,6 +6,8 @@ module.exports = {
 // NHL
   NHL: require('./NHL'), 
 // Meme
-  meme: require('./meme')
+  meme: require('./meme'),
+// Weather
+  weather: require('./weather')
 }
 
