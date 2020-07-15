@@ -8,6 +8,10 @@ module.exports = {
 // Meme
   meme: require('./meme'),
 // Weather
-  weather: require('./weather')
+  weather: require('./weather'),
+// Add Todo
+  AddData: require('./AddData'),
+// Get Todo
+  GetTodos: require('./GetTodos')
 }
 

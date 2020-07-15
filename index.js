@@ -1,9 +1,13 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+require('./config/db');
 require('dotenv').config({ path: './config.env' });
 const TOKEN = process.env.DISCORD_TOKEN;
 const API_KEY = process.env.WEATHER_API_KEY;
+
+// DB connect
+const connectDB = require('./config/db');
+connectDB();
 
 // COMMANDS
 const botCommands = require('./commands')
@@ -52,3 +56,4 @@ bot.on('message', msg => {
   }
 });
 
+// ADD to DB
