@@ -10,11 +10,12 @@ const connectDB = require('./config/db');
 connectDB();
 
 // COMMANDS
-const botCommands = require('./commands')
+const botCommands = require('./commands/index.js');
 const toolCommands = require('./commands/Tools/Commands.js');
+const todoCommands = require('./commands/Todo/Commands.js')
 bot.commands = new Discord.Collection();
 
-let commandObj = { ...botCommands, ...toolCommands};
+let commandObj = {...botCommands, ...toolCommands, ...todoCommands};
 // console.log('TOOLS COMMANDS: ', commandObj);
 
 Object.keys(commandObj).map(key => {
@@ -55,5 +56,3 @@ bot.on('message', msg => {
     msg.reply('there was an error trying to execute that command!');
   }
 });
-
-// ADD to DB

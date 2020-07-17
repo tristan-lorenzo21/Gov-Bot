@@ -32,11 +32,6 @@ module.exports = {
   }
 }
 
-
-
-
-
-
 // EXAMPLE CODE
 
 // module.exports = {

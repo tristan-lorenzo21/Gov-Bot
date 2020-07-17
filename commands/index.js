@@ -9,9 +9,7 @@ module.exports = {
   meme: require('./meme'),
 // Weather
   weather: require('./weather'),
-// Add Todo
-  AddData: require('./AddData'),
-// Get Todo
-  GetTodos: require('./GetTodos')
+// Get movies
+  Movies: require('./Movies')
 }
 

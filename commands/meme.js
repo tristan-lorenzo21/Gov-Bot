@@ -13,17 +13,6 @@ const Discord = require('discord.js');
         let url = randomMeme.url
         let memeName = randomMeme.name
 
-        // const meme = new Discord.MessageEmbed()
-        //   .setColor('#0099ff')
-        //   .setTitle('Meme of the Day')
-        //   .setURL(url)
-        //   .addFields(
-        //     { name: 'Meme: ', value: memeName, inline: true }
-        //   )
-        //   .setImage(url)
-
-        // msg.channel.send(meme);
-
         const meme = new Discord.MessageEmbed()
           .setColor('#0099ff')
           .setTitle('Meme of the Day')
